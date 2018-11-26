@@ -15,7 +15,7 @@ from django.shortcuts import redirect
 
 def post_list(request):
 	posts =	Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-	print "inside post list method"
+	print ("inside post list method")
 	return render(request, 'blog/post_list.html', {'posts': posts})
 
 
@@ -29,7 +29,7 @@ def post_new(request):
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
-    print "inside post_detail method"
+    print ("inside post_detail method")
     return render(request, 'blog/post_detail.html', {'post': post})
 
 def post_new(request):

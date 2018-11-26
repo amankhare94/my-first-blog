@@ -9,4 +9,4 @@ urlpatterns = [
     url('', views.post_list, name='post_list'),
 ]
 
-print urlpatterns
+print (urlpatterns)
